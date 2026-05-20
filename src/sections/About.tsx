@@ -15,7 +15,7 @@ export default function About() {
           >
             <div className="relative">
               <div className="w-72 h-72 rounded-2xl bg-gradient-to-br from-green-400/20 to-gray-800 border border-green-400/20 flex items-center justify-center">
-                <span className="text-8xl">👨‍💻</span>
+                <span className="text-8xl"><img src="/abdul.png" alt="abdul" /></span>
               </div>
               <div className="absolute -bottom-4 -right-4 bg-gray-900 border border-gray-800 rounded-xl px-4 py-2">
                 <p className="text-green-400 font-bold text-sm">2+ Years</p>
