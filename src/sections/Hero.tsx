@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Mail,Linkedin, MessageCircle } from "lucide-react";
+import { ArrowDown} from "lucide-react";
  
 export default function Hero() {
   return (
@@ -79,13 +79,13 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/50 transition"
           >
-            <Github size={18} />
+            <img src="github.svg" alt="GitHub" width={16} height={16} />
           </a>
           <a
             href="mailto:abdulahisholabi@gmail.com"
             className="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/50 transition"
           >
-            <Mail size={18} />
+            <img src="mail.svg" alt="Email" width={16} height={16} />
           </a>
           <a
             href="https://www.linkedin.com/in/abdulahi-sholabi"
@@ -93,7 +93,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/50 transition"
           >
-            <Linkedin size={18} />
+            <img src="linkedin.svg" alt="LinkedIn" width={16} height={16} />
           </a>
           <a
             href="https://wa.me/2348171090918"
@@ -101,7 +101,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/50 transition"
           >
-            <MessageCircle size={18} />
+            <img src="whatsapp.svg" alt="WhatsApp" width={16} height={16} />
           </a>
         </motion.div>
 

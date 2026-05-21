@@ -1,4 +1,4 @@
-import { Github, Mail, Heart, Linkedin, MessageCircle } from "lucide-react";
+import {Heart} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -15,13 +15,13 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-500 hover:text-green-400 hover:border-green-400/50 transition"
           >
-            <Github size={16} />
+            <img src="github.svg" alt="GitHub" width={16} height={16} />
           </a>
           <a
             href="mailto:abdulahisholabi@gmail.com"
             className="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-500 hover:text-green-400 hover:border-green-400/50 transition"
           >
-            <Mail size={16} />
+            <img src="mail.svg" alt="Mail" width={16} height={16} />
           </a>
           <a
             href="https://www.linkedin.com/in/abdulahi-sholabi"
@@ -29,7 +29,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-500 hover:text-green-400 hover:border-green-400/50 transition"
           >
-            <Linkedin size={16} />
+            <img src="linkedin.svg" alt="LinkedIn" width={16} height={16} />
           </a>
           <a
             href="https://wa.me/2348171090918"
@@ -37,13 +37,9 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-500 hover:text-green-400 hover:border-green-400/50 transition"
           >
-            <MessageCircle size={16} />
+            <img src="whatsapp.svg" alt="WhatsApp" width={16} height={16} />
           </a>
         </div>
-
-
-
-
 
         <p className="text-gray-700 text-xs flex items-center gap-1">
           Built with <Heart size={12} className="text-green-400" /> React + Tailwind + Framer Motion

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import {Mail, Github, MapPin, Send, Linkedin, MessageCircle } from "lucide-react";
+import { Send, } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -45,31 +45,31 @@ export default function Contact() {
 
   const contactLinks = [
   {
-    icon: Mail,
+    icon: '/mail.svg',
     label: "Email",
     value: "abdulahisholabi@gmail.com",
     href: "mailto:abdulahisholabi@gmail.com",
   },
   {
-    icon: Linkedin,
+    icon: '/linkedin.svg',
     label: "LinkedIn",
     value: "linkedin.com/in/abdulahi-sholabi",
     href: "https://www.linkedin.com/in/abdulahi-sholabi",
   },
   {
-    icon: Github,
+    icon: '/github.svg',
     label: "GitHub",
     value: "github.com/abdul-p",
     href: "https://github.com/abdul-p",
   },
   {
-    icon: MessageCircle,
+    icon: '/whatsapp.svg',
     label: "WhatsApp",
     value: "+234 817 109 0918",
     href: "https://wa.me/2348171090918",
   },
   {
-    icon: MapPin,
+    icon: '/map-pin.svg',
     label: "Location",
     value: "Lagos, Nigeria",
     href: "#",
@@ -122,7 +122,7 @@ export default function Contact() {
                   className="flex items-center gap-4 bg-gray-900 border border-gray-800 rounded-2xl p-4 hover:border-green-400/30 transition group"
                 >
                   <div className="w-10 h-10 rounded-xl bg-green-400/10 border border-green-400/20 flex items-center justify-center shrink-0">
-                    <link.icon size={18} className="text-green-400" />
+                    <img src={link.icon} alt={link.label} width={18} height={18} />
                   </div>
                   <div>
                     <p className="text-gray-600 text-xs uppercase tracking-wider">

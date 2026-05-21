@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Home, TrendingUp } from "lucide-react";
+import { ExternalLink, Home, TrendingUp } from "lucide-react";
 
 const projects = [
   {
@@ -100,7 +100,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="border border-gray-700 text-gray-300 px-5 py-2 rounded-xl text-sm font-medium hover:border-green-400 hover:text-green-400 transition flex items-center gap-2"
                     >
-                      <Github size={14} />
+                      <img src="/github.svg" alt="GitHub" width={14} height={14} />
                       GitHub
                     </a>
                   </div>
@@ -143,7 +143,7 @@ export default function Projects() {
             rel="noopener noreferrer"
             className="border border-gray-700 text-gray-300 px-6 py-3 rounded-xl text-sm font-medium hover:border-green-400 hover:text-green-400 transition inline-flex items-center gap-2"
           >
-            <Github size={16} />
+            <img src="github.svg" alt="GitHub" width={16} height={16} />
             View GitHub Profile
           </a>
         </motion.div>
