@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { MapPin, Mail, Github, Calendar } from "lucide-react";
+import { MapPin, Calendar } from "lucide-react";
 
 const info = [
   { icon: MapPin, label: "Location", value: "Lagos, Nigeria" },
-  { icon: Mail, label: "Email", value: "abdulahisholabi@gmail.com" },
-  { icon: Github, label: "GitHub", value: "github.com/abdul-p" },
+  { icon: '/mail.svg', label: "Email", value: "abdulahisholabi@gmail.com" },
+  { icon: '/github.svg', label: "GitHub", value: "github.com/abdul-p" },
   { icon: Calendar, label: "Status", value: "Available for work" },
 ];
 
@@ -105,7 +105,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="border border-gray-700 text-gray-300 px-6 py-2.5 rounded-xl font-medium hover:border-green-400 hover:text-green-400 transition text-sm flex items-center gap-2"
               >
-                <Github size={16} />
+                <img src="/github.svg" alt="GitHub" width={16} height={16} />
                 GitHub
               </a>
             </div>
