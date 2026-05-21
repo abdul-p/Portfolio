@@ -1,4 +1,4 @@
-impimport { Github, Mail, Heart, Linkedin, MessageCircle } from "lucide-react";ort { Github, Mail, Heart } from "lucide-react";
+import { Github, Mail, Heart, Linkedin, MessageCircle } from "lucide-react";ort { Github, Mail, Heart } from "lucide-react";
 
 export default function Footer() {
   return (
