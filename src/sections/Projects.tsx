@@ -85,7 +85,7 @@ export default function Projects() {
                   </p>
 
                   <div className="flex gap-3">
-                    
+                    <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
