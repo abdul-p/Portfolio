@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import {Mail, Github, MapPin, Send, Linkedin, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ export default function Contact() {
     setError("");
 
     try {
-      const res = await fetch("https://formspree.io/f/mdajegoq", {
+      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -36,32 +37,44 @@ export default function Contact() {
         setError("Something went wrong. Please try again.");
       }
     } catch (err) {
-      setError(`Something went wrong ${err}. Please try again.`);
+      setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
   };
 
   const contactLinks = [
-    {
-      label: "Email",
-      value: "abdulahisholabi@gmail.com",
-      href: "mailto:abdulahisholabi@gmail.com",
-      icon: "📧",
-    },
-    {
-      label: "GitHub",
-      value: "github.com/abdul-p",
-      href: "https://github.com/abdul-p",
-      icon: "💻",
-    },
-    {
-      label: "Location",
-      value: "Lagos, Nigeria",
-      href: "#",
-      icon: "📍",
-    },
-  ];
+  {
+    icon: Mail,
+    label: "Email",
+    value: "abdulahisholabi@gmail.com",
+    href: "mailto:abdulahisholabi@gmail.com",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "linkedin.com/in/abdulahi-sholabi",
+    href: "https://www.linkedin.com/in/abdulahi-sholabi",
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "github.com/abdul-p",
+    href: "https://github.com/abdul-p",
+  },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "+234 817 109 0918",
+    href: "https://wa.me/2348171090918",
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Lagos, Nigeria",
+    href: "#",
+  },
+];
 
   return (
     <section id="contact" className="py-24 px-6 bg-gray-900/50">
@@ -85,7 +98,7 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left — Contact Info */}
+          {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -101,14 +114,16 @@ export default function Contact() {
 
             <div className="space-y-4">
               {contactLinks.map((link) => (
-               <a 
+                <a
                   key={link.label}
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 bg-gray-900 border border-gray-800 rounded-2xl p-4 hover:border-green-400/30 transition group"
                 >
-                  <span className="text-2xl">{link.icon}</span>
+                  <div className="w-10 h-10 rounded-xl bg-green-400/10 border border-green-400/20 flex items-center justify-center shrink-0">
+                    <link.icon size={18} className="text-green-400" />
+                  </div>
                   <div>
                     <p className="text-gray-600 text-xs uppercase tracking-wider">
                       {link.label}
@@ -121,7 +136,6 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Availability */}
             <div className="bg-green-400/10 border border-green-400/20 rounded-2xl p-5">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -136,7 +150,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Right — Form */}
+          {/* Right */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -146,7 +160,9 @@ export default function Contact() {
           >
             {success ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-10">
-                <span className="text-5xl mb-4">🎉</span>
+                <div className="w-16 h-16 rounded-full bg-green-400/10 border border-green-400/20 flex items-center justify-center mb-4">
+                  <Send size={24} className="text-green-400" />
+                </div>
                 <h3 className="text-white font-bold text-xl mb-2">
                   Message Sent!
                 </h3>
@@ -216,9 +232,10 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-green-400 text-gray-950 py-3 rounded-xl text-sm font-bold hover:bg-green-300 transition disabled:opacity-50"
+                  className="w-full bg-green-400 text-gray-950 py-3 rounded-xl text-sm font-bold hover:bg-green-300 transition disabled:opacity-50 flex items-center justify-center gap-2"
                 >
-                  {loading ? "Sending..." : "Send Message →"}
+                  <Send size={16} />
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
