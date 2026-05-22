@@ -5,8 +5,32 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
       {/* Background glows */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-green-400/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl pointer-events-none" />
+      <motion.div
+        animate={{
+          scale: [1, 1.15, 0.9, 1],
+          x: [0, 30, -20, 0],
+          y: [0, -20, 40, 0],
+        }}
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-green-400/10 rounded-full blur-3xl pointer-events-none"
+      />
+      <motion.div
+        animate={{
+          scale: [1, 0.85, 1.1, 1],
+          x: [0, -40, 30, 0],
+          y: [0, 30, -20, 0],
+        }}
+        transition={{
+          duration: 18,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl pointer-events-none"
+      />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.div
@@ -64,45 +88,50 @@ export default function Hero() {
         </motion.div>
 
         {/* Social Links */}
-               
-
-        // Replace the social links div with this:
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex justify-center gap-4 mb-16"
         >
-        <a 
+          <motion.a 
             href="https://github.com/abdul-p"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/50 transition"
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.95 }}
+            className="group w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center hover:border-green-400/50 transition"
           >
-            <img src="github.svg" alt="GitHub" width={16} height={16} />
-          </a>
-          <a
+            <img src="/github.svg" alt="GitHub" width={16} height={16} className="brightness-0 invert opacity-60 group-hover:opacity-100 transition" />
+          </motion.a>
+          <motion.a
             href="mailto:abdulahisholabi@gmail.com"
-            className="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/50 transition"
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.95 }}
+            className="group w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center hover:border-green-400/50 transition"
           >
-            <img src="mail.svg" alt="Email" width={16} height={16} />
-          </a>
-          <a
+            <img src="/mail.svg" alt="Email" width={16} height={16} className="brightness-0 invert opacity-60 group-hover:opacity-100 transition" />
+          </motion.a>
+          <motion.a
             href="https://www.linkedin.com/in/abdulahi-sholabi"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/50 transition"
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.95 }}
+            className="group w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center hover:border-green-400/50 transition"
           >
-            <img src="linkedin.svg" alt="LinkedIn" width={16} height={16} />
-          </a>
-          <a
+            <img src="/linkedin.svg" alt="LinkedIn" width={16} height={16} className="brightness-0 invert opacity-60 group-hover:opacity-100 transition" />
+          </motion.a>
+          <motion.a
             href="https://wa.me/2348171090918"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400/50 transition"
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.95 }}
+            className="group w-10 h-10 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center hover:border-green-400/50 transition"
           >
-            <img src="whatsapp.svg" alt="WhatsApp" width={16} height={16} />
-          </a>
+            <img src="/whatsapp.svg" alt="WhatsApp" width={16} height={16} className="brightness-0 invert opacity-60 group-hover:opacity-100 transition" />
+          </motion.a>
         </motion.div>
 
         {/* Scroll indicator */}
