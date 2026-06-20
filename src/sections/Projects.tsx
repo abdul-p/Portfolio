@@ -1,7 +1,20 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Home, TrendingUp } from "lucide-react";
+import { ExternalLink, Headphones, Home, TrendingUp } from "lucide-react";
 
 const projects = [
+  {
+    title: "ServiceDesk",
+    description:
+      "A multi-tenant omnichannel customer support SaaS platform. Companies register, onboard agents via company slug, and manage customer conversations in a unified real-time workspace. Features live agent presence, ticket pickup awareness, and a subscription-based seat model.",
+    tags: ["React", "TypeScript", "Socket.io", "Framer Motion", "Node.js", "Express", "MongoDB"],
+    live: "https://service-desk-alpha-one.vercel.app",
+    github: "https://github.com/abdul-p/Service-Desk",
+    icon: Headphones,
+    color: "from-violet-500/10 to-pink-500/10",
+    border: "border-violet-500/20",
+    iconColor: "text-violet-400",
+    iconBg: "bg-violet-400/10",
+  },
   {
     title: "Vero Homes",
     description:
